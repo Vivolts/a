@@ -9,7 +9,7 @@ const player = {
   win: false,
 };
 
-const socket = io();
+const socket = io('https://immense-falls-36950-f35c8b7e0376.herokuapp.com/');
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
