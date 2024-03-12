@@ -37,9 +37,11 @@ app.get("/games/skyjo", (req, res) => {
   res.sendFile(path.join(__dirname, "templates/games/skyjo.html"));
 });
 
-http.listen(port, () => {
-  console.log(`Listening on http://localhost:${port}/`);
-});
+// http.listen(port, () => {
+//   console.log(`Listening on http://localhost:${port}/`);
+// });
+
+io.listen(process.env.PORT || 3000)
 
 let rooms = []; //tableau qui contient toutes les rooms du serveur
 
