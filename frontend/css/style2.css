@@ -1,0 +1,331 @@
+.board {
+  background-color: gainsboro;
+}
+
+/* APPARENCE DE LA PIOCHE */
+.face-cachee {
+  background-image: url('skyjo-card.jpg');
+  background-position: center;
+  background-size: cover;
+ 
+} 
+.face-visible {
+  display: inline-block;
+  width: 60px;
+  height: 90px;
+  background-color: #c3bbbb;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 90px;
+  font-size: 0px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  position: relative; 
+} 
+
+.carte .face-cachee:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(5deg) scale(0.9); 
+}  
+
+.invisible {
+  display: none;
+}
+.carte {
+  display: inline-block;
+  width: 60px;
+  height: 90px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 90px;
+  font-size: 0px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+.carte--1 {
+  background-image: url('carte-1.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.carte--2 {
+  background-image: url('carte-2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.carte-0 {
+  background-image: url('carte0.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.carte-1 {
+  background-image: url('carte1.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.carte-2 {
+  background-image: url('carte2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.carte-3 {
+  background-image: url('carte3.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.carte-4 {
+  background-image: url('carte4.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.carte-5 {
+  background-image: url('carte5.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.carte-6 {
+  background-image: url('carte6.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.carte-7 {
+  background-image: url('carte7.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.carte-8 {
+  background-image: url('carte8.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.carte-9 {
+  background-image: url('carte9.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.carte-10 {
+  background-image: url('carte10.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.carte-11 {
+  background-image: url('carte11.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.carte-12 {
+  background-image: url('carte12.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.hand {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  gap: 5px;
+}
+
+.hand .username {
+  grid-column: 1 / -1; /* Occupera toutes les colonnes */
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #333; /* Couleur du texte */
+  padding: 10px 0; /* Espace autour du titre */
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header, .footer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.espace  {
+  text-align: center;
+  margin-top: 20px;
+}
+.game-board {
+  background-color: #fdfdfd;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Augmentation de la largeur à 95% */
+  max-width: 1400px; /* Ajustement de la largeur maximale */
+  margin: 20px auto; /* Centre l'élément horizontalement */
+  height: 1080px; /* Vous pouvez ajuster la hauteur selon vos besoins */
+}
+
+.container-des-cartes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pioche, .defausse {
+  text-align: center;
+  border: 2px solid #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  height: 200px;
+  width: 100px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.label {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.defausse . carte {
+   margin-top: 25px;
+}
+
+.maindesjoueurs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.player {
+  width: 48%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.bouton {
+  display: inline-block;
+  background-color: #007bff; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Transition pour une animation fluide */
+  margin: 0 auto; /* Centrage horizontal */
+}
+
+.bouton:hover {
+  background-color: #0056b3; /* Changement de couleur de fond au survol */
+}
+
+.bouton:focus {
+  outline: none; /* Suppression de la bordure de focus */
+}
+
+.bouton:active {
+  transform: translateY(1px); /* Effet de clic enfoncé */
+}
+
+.gros-titre {
+  font-size: 3em; /* Taille de police importante */
+  font-weight: bold; /* Gras */
+  text-align: center; /* Centrage horizontal */
+  text-transform: uppercase; /* Texte en majuscules */
+  /* Dégradé de couleurs */
+  background: linear-gradient(to right, #ff00ff, #ff0000, #ff8000, #00ff00, #00ffff, #0000ff);
+  -webkit-background-clip: text; /* Permet de clipper le dégradé de couleur au texte */
+  -webkit-text-fill-color: transparent; /* Rend le texte transparent */
+}
+
+/* Style pour le tableau */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border: 2px solid #3498db; /* Bordure du tableau */
+}
+
+/* Style pour les cellules d'en-tête */
+th {
+    background-color: #3498db; /* Fond bleu clair */
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #3498db; /* Bordure des cellules d'en-tête */
+}
+
+/* Style pour les cellules de données */
+td {
+    padding: 10px;
+    border: 1px solid #3498db; /* Bordure des cellules de données */
+}
+
+/* Style pour les lignes impaires du tableau */
+tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Fond gris clair pour les lignes impaires */
+}
+
+/* Style pour les cellules de score */
+#tableauJoueurs td[id^='score_'] {
+    font-weight: bold;
+    color: #2980b9; /* Couleur bleu foncé pour les scores */
+}
+
+.list-group {
+  padding: 0;
+}
+
+/* Style pour chaque élément de la liste */
+.list-group-item {
+  background-color: #f8f9fa; /* Couleur de fond */
+  border: none; /* Suppression de la bordure */
+  border-radius: 0; /* Pas de bordure arrondie */
+  margin-bottom: 5px; /* Marge en bas entre les éléments */
+  font-size: 16px; /* Taille de police */
+  color: #333; /* Couleur du texte */
+  transition: background-color 0.3s ease; /* Transition fluide */
+}
+
+/* Changement de couleur au survol de la souris */
+.list-group-item:hover {
+  background-color: #e9ecef; /* Couleur de fond au survol */
+}
+
+.h3 {
+   margin: 0 10px;
+}
+
+.containeraaa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.white-word {
+  color: white;
+}

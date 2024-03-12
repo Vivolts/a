@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeu du Skyjo</title>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/style2.css" />
+</head>
+
+<body>
+  <!-- Barre de navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Les jeux de Damien</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Accueil</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="gamesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Jeux
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="/games/tic-tac-toe">Morpion</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenu principal -->
+  <div class="container mt-5">
+    <h1 class="gros-titre"> Le SKYJO </h1>
+    <div class="">
+      <div class="col-sm-12 col-md-6 offset-md-3">
+        <!-- Formulaire de création de salon -->
+        <div class="alert d-none" role="alert" id="turn-message"></div>
+        <div class="card mb-5" id="user-card">
+          <div class="card-body">
+            <form method="POST" id="form">
+              <div class="mb-3">
+                <label for="username" class="form-label">Nom d'utilisateur</label>
+                <input type="text" class="form-control" id="username" minlength="2" maxlength="20" placeholder="Saisir votre nom d'utilisateur" required />
+              </div>
+              <button class="btn btn-primary" id="start" type="submit">Créer un salon privé</button>
+            </form >
+            <label class="espace" for="numPlayers">Nombre de joueurs :</label>
+            <input type="number" class="mb-3" id="numPlayers" name="numPlayers" min="2" max="7" required>
+          </div>
+        </div>
+
+        <!-- Liste des salons disponibles -->
+        <div class="card mb-3 d-none" id="rooms-card">
+          <div class="card-header">Salons disponibles</div>
+          <ul class="list-group list-group-flush" id="rooms-list"></ul>
+        </div>
+
+        <!-- Zone d'attente -->
+        <div class="d-none" id="waiting-area">
+          <div class="card mb-3">
+            <div class="card-header">En attente d'un autre joueur</div>
+            <div class="card-body mx-auto">
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <ul class="list-group" id="players-list"> Joueurs en attente :
+                <!-- La liste des joueurs sera affichée ici -->
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body text-center">
+              Partage ce lien pour inviter quelqu'un à jouer avec toi
+              <span id="link-to-share"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Début du visuel du jeu -->
+
+        
+
+
+        <!-- Zone de redémarrage -->
+        <div class="text-center d-none mt-2" id="restart-area">
+          <input class="btn btn-primary" id="restart" type="button" value="Rejouer" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+  <div class="game-board d-none text-center" id="game-card">
+    <button class="bouton" id="findutour">Mettre fin à son tour</button>
+    <button class="bouton" id="piochePioche">Piocher une carte dans la pioche</button>
+    <div class="containeraaa">
+      <h3>Pioche  <span class="white-word">szaaaaaaa</span>              Defausse</h3>
+
+    </div>
+    <div class="container-des-cartes">
+
+      <div class="pioche" id="pioche">
+
+      </div>
+
+      <div class="defausse" id="defausse">
+
+      </div>
+
+    </div>
+    <div class="maindesjoueurs" id="player-container"></div>
+    <h2>Tableau des scores</h2>
+    <div id="tableauJoueurs"></div>
+  </div>
+
+
+
+  
+  <!-- Scripts -->
+  <script src="/jquery/jquery.min.js"></script>
+  <script src="/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/aaa.js"></script>
+</body>
+</html>
